@@ -22,7 +22,7 @@ class SocketTextStreamWordCountTest extends WordSpec with BeforeAndAfterAll with
       EmbeddedKafka.createCustomTopic("input")
       EmbeddedKafka.createCustomTopic("output")
       Future {
-        FlumeStreaming.process("localhost:9092", "input")
+        FlinkStreaming.process("localhost:9092", "input")
       }
       EmbeddedKafka.publishStringMessageToKafka("input", "Test Data")
       EmbeddedKafka.consumeFirstStringMessageFrom("output") shouldEqual "TEST DATA"

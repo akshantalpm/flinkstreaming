@@ -17,6 +17,7 @@ val flinkDependencies = Seq(
   "org.apache.flink" %% "flink-scala" % flinkVersion % "provided",
   "org.apache.flink" %% "flink-streaming-scala" % flinkVersion % "provided",
   "org.apache.flink" %% "flink-connector-kafka-0.11" % "1.5.0",
+  "com.typesafe.akka" % "akka-actor" % "2.5.16",
   "ch.qos.logback" % "logback-classic" % "1.2.3",
   "org.slf4j" % "slf4j-log4j12" % "1.7.7" % Test,
   "org.scalatest" %% "scalatest" % "3.0.4" % Test,
